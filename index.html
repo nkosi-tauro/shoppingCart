@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart Mock-Up</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./src/css/main.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- jQeury -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar ">
+        <!-- Navabr links -->
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Catalogue</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+        <!-- Top Nav Icons -->
+        <div>
+            <a href="#cart-modal" class="modal-trigger">
+                <i class="material-icons">shopping_cart</i>
+            </a>
+
+            <!-- Modal Structure -->
+            <div id="cart-modal" class="modal">
+                <div class="modal-title">
+                    <h5>Your Cart</h5>
+                </div>
+                <div class="modal-content cart-content">
+                    <!-- Single Item in cart - Cart items can be appended to the cart content class -->
+                    <item>
+                        <div id="cart-container modal-content1" class="fw">
+                            <!-- <span class="close">&times;</span> -->
+                            <ul id="show-cart">
+                                <li>???????</li>
+                            </ul>
+
+                            <div class="hard-coded">
+                                <div>
+                                    <div>You have <span id="count-cart">X</span> items in your cart</div>
+                                    <div>Total Cart:R<span id="total-cart"></span></div>
+                                </div>
+                                <button id="clear-cart" class="waves-effect waves-light btn-large blue-grey">
+                                    <i class="material-icons left">clear</i>
+                                    Clear Cart
+                                </button>
+                            </div>
+                        </div>
+                    </item>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat"></a><i class="material-icons close">close</i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- All products  -->
+        <div class="row container">
+
+            <!-- Single Product -->
+            <product-wrapper class="col s3">
+                <!-- Product Img -->
+                <img-wrapper>
+
+                    <a href="#modal1" class="modal-trigger">
+                        <img class="product-image" src="https://picsum.photos/300/200?random=1" />
+                    </a>
+                </img-wrapper>
+
+                <!-- Product Content -->
+                <content>
+                    <h5>Red Paint</h5>
+
+                    <!-- Product grouped details -->
+                    <section>
+                        <h6>$60</h6>
+                        <button onclick="myFunction()" id="submit" type="submit" class='myButt contact four add-to-cart follow' value="Add to cart" href="#clear-cart" data-name="Red Paint1" data-price="5600"><i
+                                class="material-icons">shopping_cart</i></button>
+                    </section>
+                </content>
+
+                <!-- *** Modal Structure ***  -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content modal-product-view">
+                        <!-- Modal Product Content -->
+                        <h4>Red Paint</h4>
+                        <img class="product-image" src="https://picsum.photos/300/200?random=1" />
+
+                        <div class="modal-product-details">
+                            <p>$50</p>
+                            <p>A bunch of text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-circle waves-grey btn-flat">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- *** Modal Ends *** -->
+            </product-wrapper>
+            <!-- Product end -->
+
+            <!-- Single Product -->
+            <product-wrapper class="col s3">
+                <!-- Product Img -->
+                <img-wrapper>
+
+                    <a href="#modal1" class="modal-trigger">
+                        <img class="product-image" src="https://picsum.photos/300/200?random=2" />
+                    </a>
+                </img-wrapper>
+
+                <!-- Product Content -->
+                <content>
+                    <h5>Red Paint</h5>
+
+                    <!-- Product grouped details -->
+                    <section>
+                        <h6>$60</h6>
+                        <button onclick="myFunction()" id="submit" type="submit" class='myButt contact four add-to-cart follow' value="Add to cart" href="#clear-cart" data-name="Red Paint2" data-price="5600"><i
+                                class="material-icons">shopping_cart</i></button>
+                    </section>
+                </content>
+
+                <!-- *** Modal Structure ***  -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content modal-product-view">
+                        <!-- Modal Product Content -->
+                        <h4>Red Paint</h4>
+                        <img class="product-image" src="https://picsum.photos/300/200?random=2" />
+
+                        <div class="modal-product-details">
+                            <p>$50</p>
+                            <p>A bunch of text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-circle waves-grey btn-flat">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- *** Modal Ends *** -->
+            </product-wrapper>
+            <!-- Product end -->
+
+
+            <!-- Single Product -->
+            <product-wrapper class="col s3">
+                <!-- Product Img -->
+                <img-wrapper>
+
+                    <a href="#modal1" class="modal-trigger">
+                        <img class="product-image" src="https://picsum.photos/300/200?random=3" />
+                    </a>
+                </img-wrapper>
+
+                <!-- Product Content -->
+                <content>
+                    <h5>Red Paint</h5>
+
+                    <!-- Product grouped details -->
+                    <section>
+                        <h6>$60</h6>
+                        <button onclick="myFunction()" id="submit" type="submit" class='myButt contact four add-to-cart follow' value="Add to cart" href="#clear-cart" data-name="Red Paint3" data-price="600"><i class="material-icons">shopping_cart</i></button>
+                    </section>
+                </content>
+
+                <!-- *** Modal Structure ***  -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content modal-product-view">
+                        <!-- Modal Product Content -->
+                        <h4>Red Paint</h4>
+                        <img class="product-image" src="https://picsum.photos/300/200?random=3" />
+
+                        <div class="modal-product-details">
+                            <p>$50</p>
+                            <p>A bunch of text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-circle waves-grey btn-flat">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- *** Modal Ends *** -->
+            </product-wrapper>
+            <!-- Product end -->
+
+
+            <!-- Single Product -->
+            <product-wrapper class="col s3">
+                <!-- Product Img -->
+                <img-wrapper>
+
+                    <a href="#modal1" class="modal-trigger">
+                        <img class="product-image" src="https://picsum.photos/300/200?random=4" />
+                    </a>
+                </img-wrapper>
+
+                <!-- Product Content -->
+                <content>
+                    <h5>Red Paint</h5>
+
+                    <!-- Product grouped details -->
+                    <section>
+                        <h6>$60</h6>
+                        <button onclick="myFunction()" id="submit" type="submit" class='myButt contact four add-to-cart follow' value="Add to cart" href="#clear-cart" data-name="Red Paint4" data-price="560"><i class="material-icons">shopping_cart</i></button>
+                    </section>
+                </content>
+
+                <!-- *** Modal Structure ***  -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content modal-product-view">
+                        <!-- Modal Product Content -->
+                        <h4>Red Paint</h4>
+                        <img class="product-image" src="https://picsum.photos/300/200?random=4" />
+
+                        <div class="modal-product-details">
+                            <p>$50</p>
+                            <p>A bunch of text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-circle waves-grey btn-flat">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- *** Modal Ends *** -->
+            </product-wrapper>
+            <!-- Product end -->
+
+            <!-- Single Product -->
+            <product-wrapper class="col s3">
+                <!-- Product Img -->
+                <img-wrapper>
+
+                    <a href="#modal1" class="modal-trigger">
+                        <img class="product-image" src="https://picsum.photos/300/200?random=5" />
+                    </a>
+                </img-wrapper>
+
+                <!-- Product Content -->
+                <content>
+                    <h5>Red Paint</h5>
+
+                    <!-- Product grouped details -->
+                    <section>
+                        <h6>$60</h6>
+                        <button onclick="myFunction()" id="submit" type="submit" class='myButt contact four add-to-cart follow' value="Add to cart" href="#clear-cart" data-name="Red Paint5" data-price="100"><i class="material-icons">shopping_cart</i></button>
+                    </section>
+                </content>
+
+                <!-- *** Modal Structure ***  -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content modal-product-view">
+                        <!-- Modal Product Content -->
+                        <h4>Red Paint</h4>
+                        <img class="product-image" src="https://picsum.photos/300/200?random=5" />
+
+                        <div class="modal-product-details">
+                            <p>$50</p>
+                            <p>A bunch of text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-circle waves-grey btn-flat">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- *** Modal Ends *** -->
+            </product-wrapper>
+            <!-- Product end -->
+
+            <!-- Single Product -->
+            <product-wrapper class="col s3">
+                <!-- Product Img -->
+                <img-wrapper>
+
+                    <a href="#modal1" class="modal-trigger">
+                        <img class="product-image" src="https://picsum.photos/300/200?random=6" />
+                    </a>
+                </img-wrapper>
+
+                <!-- Product Content -->
+                <content>
+                    <h5>Red Paint</h5>
+
+                    <!-- Product grouped details -->
+                    <section>
+                        <h6>$60</h6>
+                        <button onclick="myFunction()" id="submit" type="submit" class='myButt contact four add-to-cart follow' value="Add to cart" href="#clear-cart" data-name="Red Paint6" data-price="1600"><i
+                                class="material-icons">shopping_cart</i></button>
+                    </section>
+                </content>
+
+                <!-- *** Modal Structure ***  -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content modal-product-view">
+                        <!-- Modal Product Content -->
+                        <h4>Red Paint</h4>
+                        <img class="product-image" src="https://picsum.photos/300/200?random=6" />
+
+                        <div class="modal-product-details">
+                            <p>$50</p>
+                            <p>A bunch of text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-circle waves-grey btn-flat">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- *** Modal Ends *** -->
+            </product-wrapper>
+            <!-- Product end -->
+
+
+            <!-- Single Product -->
+            <product-wrapper class="col s3">
+                <!-- Product Img -->
+                <img-wrapper>
+
+                    <a href="#modal1" class="modal-trigger">
+                        <img class="product-image" src="https://picsum.photos/300/200?random=7" />
+                    </a>
+                </img-wrapper>
+
+                <!-- Product Content -->
+                <content>
+                    <h5>Red Paint</h5>
+
+                    <!-- Product grouped details -->
+                    <section>
+                        <h6>$60</h6>
+                        <button onclick="myFunction()" id="submit" type="submit" class='myButt contact four add-to-cart follow' value="Add to cart" href="#clear-cart" data-name="Red Paint7" data-price="120"><i class="material-icons">shopping_cart</i></button>
+                    </section>
+                </content>
+
+                <!-- *** Modal Structure ***  -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content modal-product-view">
+                        <!-- Modal Product Content -->
+                        <h4>Red Paint</h4>
+                        <img class="product-image" src="https://picsum.photos/300/200?random=7" />
+
+                        <div class="modal-product-details">
+                            <p>$50</p>
+                            <p>A bunch of text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-circle waves-grey btn-flat">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- *** Modal Ends *** -->
+            </product-wrapper>
+            <!-- Product end -->
+
+
+            <!-- Single Product -->
+            <product-wrapper class="col s3">
+                <!-- Product Img -->
+                <img-wrapper>
+
+                    <a href="#modal1" class="modal-trigger">
+                        <img class="product-image" src="https://picsum.photos/300/200?random=8" />
+                    </a>
+                </img-wrapper>
+
+                <!-- Product Content -->
+                <content>
+                    <h5>Red Paint</h5>
+
+                    <!-- Product grouped details -->
+                    <section>
+                        <h6>$60</h6>
+                        <button onclick="myFunction()" id="submit" type="submit" class='myButt contact four add-to-cart follow' value="Add to cart" href="#clear-cart" data-name="Red Paint8" data-price="5600"><i
+                                class="material-icons">shopping_cart</i></button>
+                    </section>
+                </content>
+
+                <!-- *** Modal Structure ***  -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content modal-product-view">
+                        <!-- Modal Product Content -->
+                        <h4>Red Paint</h4>
+                        <img class="product-image" src="https://picsum.photos/300/200?random=8" />
+
+                        <div class="modal-product-details">
+                            <p>$50</p>
+                            <p>A bunch of text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-circle waves-grey btn-flat">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- *** Modal Ends *** -->
+            </product-wrapper>
+            <!-- Product end -->
+
+            <!-- =============================================== -->
+            <!-- SNACKBAR -->
+            <!-- The snackbar -->
+            <div id="snackbar">Your Item has been added to the cart <i class="fa fa-check" aria-hidden="true" style="color
+                    :rgb(26, 235, 26);"></i>
+
+            </div>
+            <!--  -->
+            <!-- =============================================== -->
+
+
+
+        </div>
+    </main>
+
+    <script src="./src/js/cartStorage.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Load dynamic data -->
+    <!-- <script src="./src/js/main.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalClass = document.querySelectorAll('.modal');
+            const newModal = M.Modal.init(modalClass);
+        });
+    </script>
+    <!-- Cart Script  -->
+    <script>
+        $(".add-to-cart").click(function(event) {
+            event.preventDefault();
+            var name = $(this).attr("data-name");
+            var price = Number($(this).attr("data-price"));
+
+            shoppingCart.addItemToCart(name, price, 1);
+            displayCart();
+        });
+
+        $("#clear-cart").click(function(event) {
+            shoppingCart.clearCart();
+            displayCart();
+        });
+
+        function displayCart() {
+            var cartArray = shoppingCart.listCart();
+            console.log(cartArray);
+            var output = "";
+
+            for (var i in cartArray) {
+                output += `
+                <item>
+                    <div class="details">
+                        <h6>${cartArray[i].name}</h6> 
+                        <p>$${cartArray[i].price}</p>
+                    </div>
+                    <div class="qty-change">
+                        <!-- qty incremment -->
+                        <button class='plus-item btn-floating btn-medium waves-effect waves-light transparent' data-name='${cartArray[i].name}'>
+                            <i class="material-icons">expand_less</i>
+                        </button>
+                        <!-- Current Quantity -->
+                        <span>${cartArray[i].count}</span>
+                        <!-- qty decremment -->
+                        <button class='subtract-item btn-floating btn-medium waves-effect waves-light transparent' data-name='${cartArray[i].name}'>
+                            <i class="material-icons">expand_more</i>
+                        </button> 
+                        <button class='delete-item btn-floating btn-medium waves-effect waves-light red flat' data-name='${cartArray[i].name}'>
+                            <i class="material-icons" style="color: white">clear</i>    
+                        </button>
+                    </div>
+                </item>
+                `;
+            }
+
+            $("#show-cart").html(output);
+            $("#count-cart").html(shoppingCart.countCart());
+            $("#total-cart").html(shoppingCart.totalCart());
+        }
+
+        $("#show-cart").on("click", ".delete-item", function(event) {
+            var name = $(this).attr("data-name");
+            shoppingCart.removeItemFromCartAll(name);
+            displayCart();
+        });
+
+        $("#show-cart").on("click", ".subtract-item", function(event) {
+            var name = $(this).attr("data-name");
+            shoppingCart.removeItemFromCart(name);
+            displayCart();
+        });
+
+        $("#show-cart").on("click", ".plus-item", function(event) {
+            var name = $(this).attr("data-name");
+            shoppingCart.addItemToCart(name, 0, 1);
+            displayCart();
+        });
+
+        $("#show-cart").on("change", ".item-count", function(event) {
+            var name = $(this).attr("data-name");
+            var count = Number($(this).val());
+            shoppingCart.setCountForItem(name, count);
+            displayCart();
+        });
+
+
+        displayCart();
+    </script>
+
+    <!-- Snack Bar code  -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+        }
+    </script>
+
+</body>
+
+</html>

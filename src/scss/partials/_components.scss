@@ -1,0 +1,196 @@
+// Global Styled Components
+// Styles for a single product
+product-wrapper {
+    margin: 2em 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    img-wrapper {
+        overflow: hidden;
+        position: relative;
+        .product-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: all 250ms ease-in-out;
+        }
+        &:hover .product-image {
+            transform: scale(1.1);
+            transition: all 180ms ease-in-out;
+            cursor: pointer;
+        }
+    }
+    content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        section {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                &:focus,
+                &:active {
+                    background: none;
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+// Cart Moodal
+#cart-modal {
+    .modal-title>h5 {
+        text-align: center;
+    }
+    .cart-content {
+        position: relative;
+        item {
+            #clear-cart>button {
+                display: flex;
+                align-items: center;
+            }
+            .fw {
+                width: 100% !important;
+                .hard-coded {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            img {
+                height: 200px;
+                object-fit: cover;
+                width: 200px;
+            }
+            .qty-change {
+                display: flex;
+                justify-content: space-around;
+                width: 10vw;
+                &>button {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    i.material-icons {
+                        line-height: normal;
+                        height: auto;
+                        color: $black;
+                    }
+                }
+            }
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 60%;
+            background: $black;
+            height: 2px;
+            margin: 3em auto 0;
+        }
+    }
+}
+
+// Modal Product View
+.modal-product-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    img {
+        width: 50%;
+    }
+    .modal-product-details {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 2em;
+        p:nth-of-type(1) {
+            margin-bottom: 2em;
+        }
+    }
+}
+
+// Snackbar
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgb(235, 2, 118);
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    &.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+}
+
+// Snackbar Animations
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

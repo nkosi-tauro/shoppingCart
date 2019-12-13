@@ -1,0 +1,27 @@
+// Mobile
+// Portrait and Landscape 
+@media only screen and (min-device-width: 120px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        .col {
+            width: auto !important;
+        }
+    }
+}
+
+// Tablet
+// Portrait and Landscape 
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        .col {
+            width: auto !important;
+        }
+    }
+}
+
+.container {
+    width: 90% !important;
+}
